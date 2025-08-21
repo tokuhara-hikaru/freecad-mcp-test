@@ -4,6 +4,11 @@
 
 This repository is a FreeCAD MCP that allows you to control FreeCAD from Claude Desktop.
 
+## Documentation
+
+- **English**: [README.md](./README.md) (this file)
+- **日本語**: [README_JP.md](./README_JP.md) | [クイックスタート](./QUICKSTART_JP.md)
+
 ## Demo
 
 ### Design a flange
