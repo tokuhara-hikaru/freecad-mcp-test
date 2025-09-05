@@ -566,32 +566,32 @@ def get_parts_list(ctx: Context) -> list[str]:
 @mcp.prompt()
 def asset_creation_strategy() -> str:
     return """
-Asset Creation Strategy for FreeCAD MCP
+FreeCAD MCP用アセット作成戦略
 
-When creating content in FreeCAD, always follow these steps:
+FreeCADでコンテンツを作成する際は、必ず以下の手順に従ってください：
 
-0. Before starting any task, always use get_objects() to confirm the current state of the document.
+0. 作業を開始する前に、必ずget_objects()を使用してドキュメントの現在の状態を確認してください。
 
-1. Utilize the parts library:
-   - Check available parts using get_parts_list().
-   - If the required part exists in the library, use insert_part_from_library() to insert it into your document.
+1. パーツライブラリの活用：
+   - get_parts_list()を使用して利用可能なパーツを確認してください。
+   - 必要なパーツがライブラリに存在する場合は、insert_part_from_library()を使用してドキュメントに挿入してください。
 
-2. If the appropriate asset is not available in the parts library:
-   - Create basic shapes (e.g., cubes, cylinders, spheres) using create_object().
-   - Adjust and define detailed properties of the shapes as necessary using edit_object().
+2. 適切なアセットがパーツライブラリにない場合：
+   - create_object()を使用して基本的な形状（例：立方体、円柱、球体など）を作成してください。
+   - edit_object()を使用して、必要に応じて形状の詳細なプロパティを調整・定義してください。
 
-3. Always assign clear and descriptive names to objects when adding them to the document.
+3. ドキュメントにオブジェクトを追加する際は、常に明確で分かりやすい名前を付けてください。
 
-4. Explicitly set the position, scale, and rotation properties of created or inserted objects using edit_object() to ensure proper spatial relationships.
+4. 作成または挿入されたオブジェクトの位置、スケール、回転プロパティをedit_object()を使用して明示的に設定し、適切な空間関係を確保してください。
 
-5. After editing an object, always verify that the set properties have been correctly applied by using get_object().
+5. オブジェクトを編集した後は、必ずget_object()を使用して設定されたプロパティが正しく適用されているかを検証してください。
 
-6. If detailed customization or specialized operations are necessary, use execute_code() to run custom Python scripts.
+6. 詳細なカスタマイズや専門的な操作が必要な場合は、execute_code()を使用してカスタムPythonスクリプトを実行してください。
 
-Only revert to basic creation methods in the following cases:
-- When the required asset is not available in the parts library.
-- When a basic shape is explicitly requested.
-- When creating complex shapes requires custom scripting.
+基本的な作成方法に戻すのは以下の場合のみです：
+- 必要なアセットがパーツライブラリにない場合。
+- 基本的な形状が明示的に要求されている場合。
+- 複雑な形状の作成にカスタムスクリプトが必要な場合。
 """
 
 
